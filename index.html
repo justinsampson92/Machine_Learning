@@ -31,7 +31,29 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p><img src="http://s8.postimg.org/skd9s80qd/roc.png" alt=""></p>
+        <h1>
+<a id="description-of-data" class="anchor" href="#description-of-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description of data</h1>
+
+<p>The data given is comprised of 4180 texts, one per line, each of which begins with one of the “spam” or “ham” labels, and the rest of the line representing the actual string of text. In total, there are 3615 ham texts and 565 spam texts (86.5% ham, 13.5% spam). The presence of the pound currency symbol and the 11-digit phone numbers as well as word spellings (“colour”) and website URLS (“.co.uk”) indicate that the texts are from the UK. Texts range in length from one to 80 words, including strings of numbers and punctuation, and appear to come from a variety of sources with a variety of intended recipients – some of the ham seem to be sent to friends, spouses, relatives, and others are sent from companies, coworkers, etc. Much of the language used in the texts appear to be shorthand (“u” instead of “you”, “cos” instead of “because”), in both spam and ham messages. </p>
+
+<p>We conclude that the texts are everyday texts originating in the UK, and we treat them as if they are written in British English.</p>
+
+<h1>
+<a id="performance" class="anchor" href="#performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance</h1>
+
+<p>See project write-up for more details.</p>
+
+<p>Accuracy = .986, PPV = 0.986, NPV = 0.987, Sensitivity = 0.912, Specificity = 0.997</p>
+
+<p>These results show that the final classifier is fairly effective, identifying 91% of the spam messages while misclassifying only 4 of the 1300 ham messages. </p>
+
+<p>The PPV is the important statistic here, and a higher PPV would be desired, since in this case 1.4% (~20) of the spam labels were actually ham.  In an actual application of spam targeting, this value would need to be much lower.</p>
+
+<p>Testing these models informed us on the difference between power features and word features. We came to the conclusion that selected power features are much more powerful than raw word features. Automated spam prediction, informed purely by the words that appear in messages, is clearly less effective than a classifier that looks at some of the higher-level features of messages.</p>
+
+<p>That being said, the raw word features seemed to have a beneficial effect on the PPV of the models. We would expect raw word features to have a better effect on predicting ham, since there will be a large variety of words in a given set of text messages, and raw word features can explain that variance.</p>
+
+<p><img src="http://s8.postimg.org/skd9s80qd/roc.png" alt=""></p>
       </section>
     </div>
 
